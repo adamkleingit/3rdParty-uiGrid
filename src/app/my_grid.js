@@ -1,3 +1,4 @@
+import cellTemplates from './cell_templates'
 const DEFAULTS = {
 	enableFiltering: true
 };
@@ -18,6 +19,11 @@ class MyGrid {
 	}
 
 	setColumns(columns) {
+		columns.forEach((col) => {
+			if (col.cellTemplate && cellTemplates[col.cellTemplate]) {
+				col.cellTemplate = cellTemplates[col.cellTemplate];
+			}
+		});
 		this.columnDefs = columns;
 		return this;		
 	}

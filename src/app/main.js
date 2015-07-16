@@ -15,10 +15,7 @@ export default class Main {
 				},
 				{
 					field: 'employed',
-					cellTemplate: `
-						<div class="ui-grid-cell-contents">
-							<input type="checkbox" ng-model="MODEL_COL_FIELD"></input>
-						</div>`
+					cellTemplate: 'checkbox'
 				}
 			]);
 	}
