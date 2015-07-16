@@ -28,6 +28,14 @@ class MyGrid {
 	}
 
 	setColumns(columns) {
+		columns.push({
+			name: ' ',
+			width: '5%',
+			enableFiltering: false,
+			enableSorting: false,
+			enableColumnMenu: false,
+			cellTemplate: 'delete'
+		});
 		columns.forEach((col) => {
 			if (col.cellTemplate && cellTemplates[col.cellTemplate]) {
 				col.cellTemplate = cellTemplates[col.cellTemplate];

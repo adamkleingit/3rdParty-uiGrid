@@ -9,6 +9,13 @@
   <div ng-controller="Main as Main">
 
     <div my-grid="Main.gridOptions"></div>
+    <form ng-submit="Main.addWorker()">
+      <input type="text" required ng-model="Main.firstName" placeholder="first">
+      <input type="text" required ng-model="Main.lastName" placeholder="last">
+      <input type="text" required ng-model="Main.company" placeholder="company">
+      <button class="btn">Add Worker</button>
+    </form>
+    Employee count: {{ Main.myData.length }}
   </div>
 
 </body>

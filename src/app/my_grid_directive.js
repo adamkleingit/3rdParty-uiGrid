@@ -12,5 +12,8 @@ export default function MyGridDirective() {
 }
 
 class MyGridDirectiveController {
-
+	removeGridRow(row) {
+		let index = this.gridOptions.data.indexOf(row.entity);
+		this.gridOptions.data.splice(index, 1);
+	}
 }
