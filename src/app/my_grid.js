@@ -16,6 +16,11 @@ class MyGrid {
 		this.data = data;
 		return this;
 	}
+
+	setColumns(columns) {
+		this.columnDefs = columns;
+		return this;		
+	}
 }
 
 export default function MyGridFactory() {
