@@ -7,15 +7,8 @@
 </head>
 <body ng-app="app">
   <div ng-controller="Main as Main">
-  
-    <div ui-grid="Main.gridOptions" ui-grid-pagination ></div>
-    <p>Current page: {{ Main.gridOptions.gridApi.pagination.getPage() }} of {{ Main.gridOptions.gridApi.pagination.getTotalPages() }}</p>
-    <button type="button" class="btn btn-success" ng-click="Main.gridOptions.gridApi.pagination.previousPage()">
-      previous page
-    </button>
-    <button type="button" class="btn btn-success" ng-click="Main.gridOptions.gridApi.pagination.nextPage()">
-      next page
-    </button>
+
+    <div my-grid="Main.gridOptions"></div>
   </div>
 
 </body>
