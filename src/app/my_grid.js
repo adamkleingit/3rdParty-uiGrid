@@ -1,16 +1,25 @@
 import cellTemplates from './cell_templates'
 const DEFAULTS = {
-	enableFiltering: true
+	enableFiltering: true,
+ 	enablePaginationControls: false,
+    paginationPageSize: 8
 };
 
 class MyGrid {
 	constructor(opts) {
 		this._setDefaults(opts);
+		this._registerEvents();
 	}
 
 	_setDefaults(opts) {
 		opts = angular.extend(DEFAULTS, opts);
 		angular.extend(this, opts)
+	}
+
+	_registerEvents() {
+		this.onRegisterApi = function (gridApi) {
+			this.gridApi = gridApi;
+		}
 	}
 
 	setData(data) {

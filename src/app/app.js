@@ -6,7 +6,7 @@ import appTemplate from 'app/app.html';
 import Main 	   from './main';
 import MyGrid 	   from './my_grid';
 
-export default angular.module('app', ['ui.grid'])
+export default angular.module('app', ['ui.grid', 'ui.grid.pagination'])
   .controller('Main', Main)
   .factory('MyGrid', MyGrid)
 
