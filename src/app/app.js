@@ -8,5 +8,5 @@ import MyGrid 	   from './my_grid';
 
 export default angular.module('app', ['ui.grid'])
   .controller('Main', Main)
-  .service('MyGrid', MyGrid)
+  .factory('MyGrid', MyGrid)
 
